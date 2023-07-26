@@ -1,0 +1,30 @@
+{
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 2, //做API转换以避免污染全局环境
+        "helpers": true, //自动引入辅助函数包
+        "regenerator": true, //做API转换以避免污染全局环境
+        "useESModules": false //使用ES6的模块化用法
+      }
+    ]
+  ],
+  "presets": ["@babel/preset-react"]
+  // "presets": [
+  //   [
+  //     "@babel/preset-env",
+  //     {
+  //       "targets": {
+  //         "chrome": 67
+  //       }, //可以将此处删除，改用.browserslistrc文件
+  //       "useBuiltIns": "usage",
+  //       // 目标环境是市场份额大于1%的浏览器并且不考虑IE8及以下的IE浏览器。Browserslist叫做目标环境配置表，
+  //       "browserlist":[
+  //         "> 1%",q
+  //         "not ie <=8"
+  //       ]
+  //     }
+  //   ]
+  // ]
+}
